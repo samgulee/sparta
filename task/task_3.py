@@ -12,6 +12,6 @@ soup = BeautifulSoup(data.text, 'html.parser')
 top = soup.select('#body-content > .newest-list > .music-list-wrap > table > tbody > tr')
 
 for mlist in top:
-    rank = mlist.select_one('td.number').text.strip()
+    m_rank = mlist.select_one('td.number').text.strip()
     artist = mlist.select_one('td.info > a.title.ellipsis').text.strip()
-    print(rank,artist)
+    print(m_rank,artist)
